@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StepVibe - Shoe Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-menu">
+            <div class="logo">
+                <h1>StepVibe</h1>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </div>
+        <nav id="navMenu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Shop</a></li>
+                <li><a href="#deals">Deals</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search shoes...">
+                <button onclick="searchShoes()">🔍</button>
+            </div>
+            <h2>Walk Your Vibe</h2>
+            <p>Trendy shoes for every step you take.</p>
+            <a href="#products" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+      <div class="products-header">
+        <h2>🛒 Top Sneaker Deals</h2>
+        <div class="search-sort">
+          <input type="text" id="search-input" placeholder="Search sneakers..." aria-label="Search sneakers" />
+          <select id="sort-select" aria-label="Sort products">
+            <option value="default">Default</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+      <div class="products-container" id="products-container">
+        <div class="card" data-category="casual" data-price="799">
+          <span class="tag">Best Deal</span>
+          <a href="https://amzn.to/43NLEdF" target="_blank" rel="nofollow"><img src="/prodect/81Acd-vMOjL._SY695_.jpg" alt="ASIAN Men's Sneakers" loading="lazy" /></a>
+          <div class="buy">
+            <h3>ASIAN Men's Sneakers</h3>
+            <p>Lightweight MEXICO-11 casual sneakers for men & boys.</p>
+            <span class="price">₹799</span>
+            <a href="https://amzn.to/43NLEdF" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="running" data-price="5000">
+          <span class="tag">Trending</span>
+          <a href="https://amzn.to/3EgKmxq" target="_blank" rel="nofollow"><img src="/prodect/71q0BqJ6PEL._SX695_.jpg" alt="Nike Men's Running Shoes" loading="lazy" /></a>
+          <div class="buy">
+            <h3>Nike Men's Running Shoes</h3>
+            <p>M Mc Trainer 3 running shoes, stylish and comfy.</p>
+            <span class="price">₹5000</span>
+            <a href="https://amzn.to/3EgKmxq" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="sports" data-price="200">
+          <span class="tag">Budget Pick</span>
+          <a href="https://amzn.to/4253ojt" target="_blank" rel="nofollow"><img src="/prodect/61gKatv2y7L._SX695_.jpg" alt="BRUTON Sports Shoes" loading="lazy" /></a>
+          <div class="buy">
+            <h3>BRUTON Sports Shoes</h3>
+            <p>Trendy sports shoes for men & boys.</p>
+            <span class="price">₹200</span>
+            <a href="https://amzn.to/4253ojt" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="running" data-price="3444">
+          <a href="https://amzn.to/4i76TdW" target="_blank" rel="nofollow"><img src="/prodect/810fKWa8z3L._SY695_.jpg" alt="U.S. POLO ASSN. Running Shoes" loading="lazy" /></a>
+          <div class="buy">
+            <h3>U.S. POLO ASSN.</h3>
+            <p>Mens Henry running shoes, premium style.</p>
+            <span class="price">₹3,444</span>
+            <a href="https://amzn.to/4i76TdW" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="sports" data-price="498">
+          <a href="https://amzn.to/42rbKAW" target="_blank" rel="nofollow"><img src="/prodect/71E62fc1NeL._SY695_.jpg" alt="BRUTON Sports Shoes" loading="lazy" /></a>
+          <div class="buy">
+            <h3>BRUTON Sports</h3>
+            <p>Sports running shoes for men & boys.</p>
+            <span class="price">₹498</span>
+            <a href="https://amzn.to/42rbKAW" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="running" data-price="599">
+          <a href="https://amzn.to/4juoQUY" target="_blank" rel="nofollow"><img src="/prodect/61BxNF5JmxL._SY695_.jpg" alt="ATHCO Men's Running Shoes" loading="lazy" /></a>
+          <div class="buy">
+            <h3>ATHCO Men's</h3>
+            <p>Lightweight shoes for running and gym.</p>
+            <span class="price">₹599</span>
+            <a href="https://amzn.to/4juoQUY" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="running" data-price="1440">
+          <a href="https://amzn.to/3ZxY7vP" target="_blank" rel="nofollow"><img src="/prodect/711NCymwEJL._SX575_.jpg" alt="adidas Men's Running Shoes" loading="lazy" /></a>
+          <div class="buy">
+            <h3>adidas Men's</h3>
+            <p>Pomazor M running shoes, sleek design.</p>
+            <span class="price">₹1,440</span>
+            <a href="https://amzn.to/3ZxY7vP" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="casual" data-price="3196">
+          <a href="https://amzn.to/43HGRdL" target="_blank" rel="nofollow"><img src="/prodect/71F9NVzaN-L._SX695_.jpg" alt="Nike Men's Sneakers" loading="lazy" /></a>
+          <div class="buy">
+            <h3>Nike Men's</h3>
+            <p>Court Royale 2 sneakers, classic style.</p>
+            <span class="price">₹3,196</span>
+            <a href="https://amzn.to/43HGRdL" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="casual" data-price="2759">
+          <a href="https://amzn.to/4cxCJ2w" target="_blank" rel="nofollow"><img src="/prodect/61sRPCuKnzL._SY695_.jpg" alt="U.S. Polo Assn. Sneakers" loading="lazy" /></a>
+          <div class="buy">
+            <h3>U.S. Polo Assn.</h3>
+            <p>Mens Joan sneakers, modern look.</p>
+            <span class="price">₹2,759</span>
+            <a href="https://amzn.to/4cxCJ2w" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="sports" data-price="679">
+          <a href="https://amzn.to/4lpz9vd" target="_blank" rel="nofollow"><img src="/prodect/71ljXAHtNHL._SY879_.jpg" alt="Vector X Cricket Shoes" loading="lazy" /></a>
+          <div class="buy">
+            <h3>Vector X Striker</h3>
+            <p>Cricket shoes with synthetic leather.</p>
+            <span class="price">₹679</span>
+            <a href="https://amzn.to/4lpz9vd" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="loafers" data-price="699">
+          <a href="https://amzn.to/44jhW0b" target="_blank" rel="nofollow"><img src="/prodect/61jb+5NZ7oL._SY575_.jpg" alt="ASIAN Men's Loafers" loading="lazy" /></a>
+          <div class="buy">
+            <h3>ASIAN Men's</h3>
+            <p>Synthetic sports loafers for boys.</p>
+            <span class="price">₹699</span>
+            <a href="https://amzn.to/44jhW0b" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="casual" data-price="1298">
+          <a href="https://amzn.to/4pQzRtY" target="_blank" rel="nofollow"><img src="/prodect/61-Fwxg6QiL._SY675_.jpg" alt="Campus Men's Sneakers" loading="lazy" /></a>
+          <div class="buy">
+            <h3>Campus</h3>
+            <p>OG-34 men's lace-up sneakers.</p>
+            <span class="price">₹1,298</span>
+            <a href="https://amzn.to/4pQzRtY" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="sports" data-price="497">
+          <a href="https://amzn.to/4cwo5bE" target="_blank" rel="nofollow"><img src="/prodect/71f3BmjCwtL._SY575_.jpg" alt="BRUTON EVA Sports Shoes" loading="lazy" /></a>
+          <div class="buy">
+            <h3>BRUTON EVA</h3>
+            <p>EVA Lite sport shoes in blue.</p>
+            <span class="price">₹497</span>
+            <a href="https://amzn.to/4cwo5bE" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="casual" data-price="639">
+          <a href="https://amzn.to/4llWaiN" target="_blank" rel="nofollow"><img src="/prodect/71A-T7rYeGL._SY695_.jpg" alt="AADI Men's Sneakers" loading="lazy" /></a>
+          <div class="buy">
+            <h3>AADI Men's</h3>
+            <p>Synthetic leather lightweight sneakers.</p>
+            <span class="price">₹639</span>
+            <a href="https://amzn.to/4llWaiN" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="casual" data-price="1209">
+          <a href="https://amzn.to/4rTvUzW" target="_blank" rel="nofollow"><img src="/prodect/71ZTcolUTDL._SY695_.jpg" alt="STANPHORD Men's Boots" loading="lazy" /></a>
+          <div class="buy">
+            <h3>STANPHORD Men's</h3>
+            <p>Pinnacle Pulse high-top boots.</p>
+            <span class="price">₹1,209</span>
+            <a href="https://amzn.to/4rTvUzW" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="loafers" data-price="487">
+          <a href="https://amzn.to/43OmfAz" target="_blank" rel="nofollow"><img src="/prodect/51RcwZSyErL._SY695_.jpg" alt="WALKAROO Men's Sandals" loading="lazy" /></a>
+          <div class="buy">
+            <h3>WALKAROO</h3>
+            <p>Men's sandals for daily use.</p>
+            <span class="price">₹487</span>
+            <a href="https://amzn.to/43OmfAz" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="loafers" data-price="2274">
+          <a href="https://amzn.to/3RI9n7L" target="_blank" rel="nofollow"><img src="/prodect/81dPR0CELML._SY535_.jpg" alt="U.S. POLO ASSN. Loafers" loading="lazy" /></a>
+          <div class="buy">
+            <h3>U.S. POLO ASSN.</h3>
+            <p>Men's pull-on driving loafers.</p>
+            <span class="price">₹2,274</span>
+            <a href="https://amzn.to/3RI9n7L" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="card" data-category="loafers" data-price="399">
+          <span class="tag">Best Deal</span>
+          <a href="https://amzn.to/4sXyVqZ" target="_blank" rel="nofollow"><img src="/prodect/51SBxBWWHmL._SY695_.jpg" alt="AJANTA Men's Loafers" loading="lazy" /></a>
+          <div class="buy">
+            <h3>AJANTA Men's</h3>
+            <p>Fk0080 loafers, sleek design.</p>
+            <span class="price">₹399</span>
+            <a href="https://amzn.to/4sXyVqZ" target="_blank" rel="nofollow" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deals Section -->
+    <section id="deals" class="deals">
+        <h2>Exclusive Deals</h2>
+        <div class="deals-grid" id="dealsGrid"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <p>Connect with us!</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">Pinterest</a>
+            </div>
+            <p>© 2025 StepVibe. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
